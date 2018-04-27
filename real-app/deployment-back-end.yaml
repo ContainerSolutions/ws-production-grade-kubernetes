@@ -8,7 +8,7 @@ spec:
     metadata:
       labels:
         app: real-app
-        type: backend
+        tier: backend
     spec:
       containers:
         - name: production-grade-be

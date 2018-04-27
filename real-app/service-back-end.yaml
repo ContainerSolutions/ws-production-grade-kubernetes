@@ -9,4 +9,4 @@ spec:
     port: 80
     targetPort: 8080
   selector:
-    type: backend
+    tier: backend
