@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: pgk-front-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: real-app
+        type: frontend
+    spec:
+      containers:
+        - name: production-grade-fe
+          image: icrosby/k8s-real-fe:latest
+          ports:
+            - containerPort: 80

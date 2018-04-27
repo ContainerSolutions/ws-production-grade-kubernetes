@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: busybox
+spec:
+  containers:
+  - name: busy
+    image: busybox
+    volumeMounts:
+    - name: test
+      mountPath: /busy
+    command:  
+      - sleep
+      - "3600"
+  - name: box
+    image: busybox
+    volumeMounts:
+    - name: test
+      mountPath: /box
+    command:
+      - sleep
+      - "3600"
+  volumes:
+  - name: test
+    emptyDir: {}
